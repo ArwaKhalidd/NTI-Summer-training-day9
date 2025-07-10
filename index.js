@@ -1,37 +1,14 @@
 const http = require("http");
 
-let users = [
-    {
-        id: 1,
-        name: "akram",
-        age: 22,
-    },
-    {
-        id: 2,
-        name: "ali",
-        age: 20,
-    },
-    {
-        id: 3,
-        name: "arwa",
-        age: 21,
-    },
+let Users = [
+    { id: 1, name: "Arwa", age: 30 },
+    { id: 2, name: "Alaa", age: 25 },
 ];
 
-let posts = [
-    {
-        id: 1,
-        text: "post1",
-    },
-    {
-        id: 2,
-        text: "post2",
-    },
-    {
-        id: 3,
-        text: "post3",
-    },
-];
+let Posts = [
+    {id:1, UID:1, title:"post1", content:"post1..."},
+    {id:2, UID:1, title:"post2", content:"post2..."},
+]
 
 const server = http.createServer((req, res) => {
     if (req.url === "/users" && req.method === "GET") {
